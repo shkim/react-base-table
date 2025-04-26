@@ -1,6 +1,6 @@
 {
-  "name": "react-base-table",
-  "version": "1.13.5",
+  "name": "@shkimjs/react-base-table",
+  "version": "1.14.2",
   "description": "a react table component to display large data set with high performance and flexibility",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Autodesk/react-base-table.git"
+    "url": "https://github.com/shkim/react-base-table.git"
   },
   "scripts": {
     "start": "cd website && npm start",
@@ -24,7 +24,7 @@
     "clean": "rimraf lib es styles.css",
     "build:js": "cross-env NODE_ENV=production babel src -d lib --ignore '**/*.spec.js','__snapshots__' --copy-files --source-maps",
     "build:es": "cross-env BABEL_ENV=es NODE_ENV=production babel src -d es --ignore '**/*.spec.js','__snapshots__' --copy-files --source-maps",
-    "build:css": "node-sass src/_BaseTable.scss ./styles.css --output-style expanded",
+    "build:css": "sass src/_BaseTable.scss ./styles.css --style expanded",
     "build": "npm run build:js && npm run build:es && npm run build:css",
     "format": "prettier --write 'src/**/*.{js,scss}'",
     "prebuild": "npm run clean",
@@ -53,8 +53,8 @@
     "react-window": "^1.8.2"
   },
   "peerDependencies": {
-    "react": "^16.0.0 || ^17.0.0",
-    "react-dom": "^16.0.0 || ^17.0.0"
+    "react": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -82,7 +82,7 @@
     "jest": "^23.5.0",
     "lerna": "^3.2.1",
     "lint-staged": "^7.2.2",
-    "node-sass": "^4.9.3",
+    "sass": "^1.87.0",
     "prettier": "^1.14.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -100,5 +100,13 @@
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/"
     ]
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "bugs": {
+    "url": "https://github.com/Autodesk/react-base-table/issues"
+  },
+  "homepage": "https://github.com/Autodesk/react-base-table#readme"
 }
